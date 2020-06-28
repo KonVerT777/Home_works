@@ -233,10 +233,10 @@ figure {
     font-weight: 400;
     color: #333;
     text-align: justify;
-    margin-top: 0px;
+    margin: 0;
 }
 
-.screenshots:after {
+.screenshots figure:after {
     content: "";
     display: block;
     width: 100%;
@@ -320,6 +320,13 @@ figure {
     align-items: flex-end;
 }
 
+.prices:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
 .prices-title {
     display: block;
     width: 100%;
@@ -345,18 +352,22 @@ figure {
     line-height: 30px;
     font-weight: 400;
     color: #fff;
-    margin: 15px 0;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+
 }
 
 span.price-item-cost {
-    height: 71px;
     border: 2px solid #445162;
     font-size: 40px;
-    line-height: 75px;
     font-weight: 400;
     color: #445162;
     background-color: #fff;
     display: block;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
 ol.prise-item-list {
@@ -376,7 +387,7 @@ li:last-child {
     margin-bottom: 15px;
 }
 
-input.button {
+button {
     display: block;
     margin: 0 auto;
     width: 260px;
@@ -388,12 +399,174 @@ input.button {
     color: #445161;
     border-radius: 10px;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-input.button:hover {
+button:hover {
     background-color: darkgrey;
 }
 
-input.button:active {
+button:active {
     color: red;
+}
+
+.page-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+    background-color: #445162;
+
+}
+
+.page-footer-title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #fff;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.page-footer-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    justify-content: center;
+    margin: 0 45px 0 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    margin: 0 0 20px 0;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+    text-transform: capitalize;
+    background-color: #fff;
+    outline: none;
+    font-family: "Arial";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #445162;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+    background-color: lightgrey;
+    color: mediumvioletred;
+    border-color: white;
+}
+
+textarea {
+    height: 170px;
+    resize: none;
+}
+
+input[type="submit"] {
+    width: 140px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #445162;
+    outline: none;
+}
+
+input[type="submit"]:hover {
+    background-color: darkgrey;
+}
+
+input[type="submit"]:active {
+    color: red;
+}
+
+.main-footer-contacts {
+    margin: 0;
+    background-color: #445162;
+    color: #fff;
+}
+
+.main-footer-contacts-link {
+    display: block;
+    margin: 0 0 15px 0;
+    padding: 0 0 0 30px;
+    position: relative;
+    font-size: 16px;
+    font-family: "arial";
+    line-height: 1.5;
+    text-align: left;
+}
+
+.main-footer-contacts-link:last-of-type {
+    margin: 0 0 32px 0;
+}
+
+.main-footer-contacts-link::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 1px;
+    left: 0;
+}
+
+.main-footer-contacts-link:nth-of-type(1):before {
+    background-image: url(../img/skype_icon_319_1.png);
+}
+
+.main-footer-contacts-link:nth-of-type(2):before {
+    background-image: url(../img/icq_icon_324.png);
+}
+
+.main-footer-contacts-link:nth-of-type(3):before {
+    background-image: url(../img/email_icon_332.png);
+}
+
+.main-footer-contacts-link:nth-of-type(4):before {
+    background-image: url(../img/phone_icon_337.png);
+}
+
+
+.main-footer-contacts-icons {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.main-footer-contacts-net {
+    display: block;
+    width: 42px;
+    height: 42px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    margin-right: 5px;
+}
+
+
+.footer-span {
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    height: 27px;
+    width: 100%;
+    text-align: center;
+    display: block;
 }
