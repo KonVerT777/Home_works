@@ -236,7 +236,7 @@ figure {
     margin: 0;
 }
 
-.screenshots figure:after {
+.screenshots:after {
     content: "";
     display: block;
     width: 100%;
@@ -548,18 +548,57 @@ input[type="submit"]:active {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    border: 1px solid red;
+
 }
 
 .main-footer-contacts-net {
     display: block;
-    width: 42px;
+    width: 43px;
     height: 42px;
     box-sizing: border-box;
-    border: 1px solid #fff;
     margin-right: 5px;
+    background-image: url(../img/social_buttons_338.png)
 }
 
+.main-footer-contacts-net:nth-child(1) {
+    background-position: 0 0;
+}
+
+.main-footer-contacts-net:nth-child(2) {
+    background-position: -49px 0;
+}
+
+.main-footer-contacts-net:nth-child(3) {
+    background-position: -99px 0;
+}
+
+.main-footer-contacts-net:nth-child(4) {
+    background-position: -148px 0;
+}
+
+.main-footer-contacts-net:nth-child(5) {
+    background-position: 43px 0;
+}
+
+.main-footer-contacts-net:nth-child(1):hover {
+    opacity: .75;
+}
+
+.main-footer-contacts-net:nth-child(2):hover {
+    opacity: .75;
+}
+
+.main-footer-contacts-net:nth-child(3):hover {
+    opacity: .75;
+}
+
+.main-footer-contacts-net:nth-child(4):hover {
+    opacity: .75;
+}
+
+.main-footer-contacts-net:nth-child(5):hover {
+    opacity: .75;
+}
 
 .footer-span {
     padding: 5px;
