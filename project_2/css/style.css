@@ -119,11 +119,12 @@
 
 body {
     margin: 0 auto;
-    width: 1920px;
+    max-width: 1920px;
+    box-sizing: border-box;
 }
 
 .page-header {
-    height: 1024px;
+    min-height: 1024px;
     background-color: rgba(17, 17, 17, 0.7);
     background-image: url(../img/bgr_photo_11949.png);
     background-repeat: no-repeat;
@@ -132,14 +133,15 @@ body {
 
 .page-header-top {
     display: flex;
-    width: 1180px;
-    padding-left: 375px;
-    padding-top: 60px;
+    justify-content: center;
+    width: 100%;
+    padding-top: 40px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .logo-link {
     display: flex;
-    width: 191px;
     text-decoration: none;
     align-items: center;
     color: #fff;
@@ -152,6 +154,10 @@ body {
 
 .logo-icon {
     fill: currentColor;
+}
+
+.logo-icon:hover {
+    opacity: .7;
 }
 
 .logo-name {
@@ -170,17 +176,28 @@ body {
 
 .page-navigation {
     margin-left: 220px;
-    margin-right: 60px;
+    margin-right: 53px;
     display: flex;
     align-items: center;
 }
 
-ul.page-navigation-list {
+.page-navigation-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    width: 686px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 636px;
+}
+
+label,
+#page-navigation-list {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .page-navigation-list {
+    visibility: visible;
 }
 
 .page-navigation-list-item {
@@ -189,7 +206,7 @@ ul.page-navigation-list {
     line-height: 1.2;
     font-weight: 300;
     color: #fff;
-    margin-right: 30px;
+    padding-right: 24px;
 }
 
 a.page-navigation-list-item-link {
@@ -285,7 +302,7 @@ section.carusel {
     min-height: 400px;
     margin: 0 auto;
     position: relative;
-    margin-top: 250px;
+    margin-top: 210px;
     padding: 0 150px;
 }
 
@@ -305,12 +322,10 @@ section.carusel {
 
 .carusel-btn-left {
     background-image: url(../img/left_11970.png);
-    margin 0 475px 0 0;
 }
 
 .carusel-btn-right {
     background-image: url(../img/right_11969.png);
-    0 0 0 475px;
 }
 
 .carusel-content {
@@ -337,7 +352,7 @@ section.carusel {
     font-weight: 800;
     font-style: normal;
     color: #ffffff;
-    margin-top: 15px;
+    margin-top: 6px;
 }
 
 .carusel-content-text {
@@ -347,7 +362,7 @@ section.carusel {
     font-weight: 300;
     font-style: normal;
     color: #ffffff;
-    margin: 20px 0 55px 0;
+    margin: 10px 0 50px 0;
 }
 
 .carusel-content-start {
@@ -377,9 +392,9 @@ section.carusel {
 .carusel-pagination {
     width: 100px;
     position: absolute;
-    margin-top: 410px;
+    margin-top: 933px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .carusel-pagination-item {
@@ -399,13 +414,17 @@ section.carusel {
     margin: -4px;
 }
 
+.page-content {
+    width: 100%;
+}
+
 .page-content-features {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1160px;
+    max-width: 1166px;
     margin: 0 auto;
-    padding: 85px 0 82px 0;
+    padding: 80px 0 85px 0;
     box-sizing: border-box;
 }
 
@@ -414,7 +433,6 @@ section.carusel {
     clear: both;
     display: block;
     width: 100%;
-
 }
 
 .page-content-features-web,
@@ -469,7 +487,7 @@ section.carusel {
 
 .page-content-features-title {
     width: 100%;
-    margin: 0 0 10px 0;
+    margin: 0;
     text-align: center;
     font-family: raleway;
     font-size: 22px;
@@ -488,7 +506,7 @@ section.carusel {
     color: #8c8c8c;
     text-align: center;
     width: 268px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .page-content-realization {
@@ -510,7 +528,7 @@ section.carusel {
     font-weight: 600;
     font-style: normal;
     color: #555555;
-    margin: 80px 0 25px 0;
+    margin: 75px 0 10px 0;
 }
 
 .page-content-realization-text {
@@ -537,14 +555,15 @@ section.carusel {
 }
 
 .page-aside {
-    min-height: 150px;
     display: flex;
-    padding: 50px 375px;
-    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+    justify-content: space-around;
     align-items: center;
     background-color: #241c1a;
-    padding: 50px 375px;
 }
+
 
 .page-aside-title {
     font-family: raleway;
@@ -553,7 +572,7 @@ section.carusel {
     font-weight: 400;
     font-style: normal;
     color: #fff;
-    margin: 0 0 10px 0;
+    margin: 0 0 7px 0;
 }
 
 .waxom {
@@ -599,10 +618,13 @@ section.carusel {
 }
 
 .page-content-projects {
+    max-width: 1170px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
     justify-content: center;
-    padding: 80px 360px;
+    padding: 80px 0;
+    box-sizing: border-box;
 }
 
 .page-content-projects-title {
@@ -615,7 +637,7 @@ section.carusel {
     font-style: normal;
     color: #555;
     text-align: center;
-    margin: 0 0 25px 0;
+    margin: 4px 0 15px 0;
 }
 
 .page-content-projects-text {
@@ -628,7 +650,7 @@ section.carusel {
     font-style: normal;
     color: #8c8c8c;
     text-align: center;
-    margin: 0 0 40px 0;
+    margin: 0 0 35px 0;
 }
 
 .page-content-projects-list {
@@ -670,7 +692,7 @@ section.carusel {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 30px 0 0 30px;
+    margin: 30px 0 0 20px;
     position: relative;
 }
 
@@ -700,7 +722,7 @@ section.carusel {
     font-weight: 500;
     font-style: normal;
     color: #c7b299;
-    margin: 30px 0 10px 0;
+    margin: 25px 0 8px 0;
 }
 
 .page-content-projects-descr-link {
@@ -715,12 +737,20 @@ section.carusel {
 
 .page-project-btn {
     display: block;
+    margin: 0 auto;
     width: 170px;
     height: 50px;
     background-color: #998675;
     border-radius: 3.0px;
     border: none;
     margin-top: 40px;
+    color: #fff;
+    font-family: raleway;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
 }
 
 .page-project-btn:hover {
@@ -798,7 +828,7 @@ section.carusel {
 
 .video {
     width: 100%;
-    height: 705px;
+    max-height: 705px;
     background-image: url(../img/bg_video.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -816,9 +846,9 @@ section.carusel {
 }
 
 .video-wrp {
-    width: 552px;
+    max-width: 552px;
+    max-height: 290px;
     text-align: center;
-    margin: 0;
     position: absolute;
     margin-left: 0;
     margin-top: 0;
@@ -833,7 +863,7 @@ section.carusel {
     border-radius: 50%;
     outline: none;
     background-color: rgba(0, 0, 0, 0.2);
-    margin-bottom: 45px;
+    margin-bottom: 48px;
 }
 
 .video-btn-pic {
@@ -865,7 +895,7 @@ section.carusel {
     font-weight: 300;
     font-style: normal;
     color: #fff;
-    margin: 35px 0 40px 0;
+    margin: 16px 0 25px 0;
 }
 
 .video-time {
@@ -878,18 +908,24 @@ section.carusel {
 }
 
 .mobile {
-    width: 100%;
-    min-height: 695px;
+    max-width: 1120px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    margin: 0 auto;
     box-sizing: border-box;
-    padding: 85px 380px 0 420px;
+    padding: 80px 0 0;
 }
 
 .mobile-devices {
-    width: 657px;
+    max-width: 657px;
     position: relative;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.mobile-image {
+    margin: 0 0 0 26px;
 }
 
 .mobile-devices-title {
@@ -899,7 +935,7 @@ section.carusel {
     font-weight: 600;
     font-style: normal;
     color: #555555;
-    margin: 0 0 40px 0;
+    margin: 110px 0 22px 0;
 }
 
 .mobile-devices-text {
@@ -909,7 +945,7 @@ section.carusel {
     font-weight: 300;
     font-style: normal;
     color: #8c8c8c;
-    margin: 0 0 45px 0;
+    margin: 0 0 30px 0;
     text-align: justify;
 }
 
@@ -944,9 +980,9 @@ section.carusel {
     width: 100%;
     min-height: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
-    padding: 70px 480px 60px 480px;
+    padding: 70px 0 60px;
     box-sizing: border-box;
     background-color: #221b19;
 }
@@ -955,7 +991,7 @@ section.carusel {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 136px;
+    width: 201px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -986,7 +1022,7 @@ section.carusel {
 
 .statistic-descr-txt {
     width: 100%;
-    margin: 0 0 30px 0;
+    margin: 0 0 20px 0;
     font-family: montserrat;
     font-size: 14px;
     line-height: 20px;
@@ -997,13 +1033,14 @@ section.carusel {
 }
 
 .recent-posts {
-    width: 100%;
+    max-width: 1170px;
     min-height: 755px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
     justify-content: center;
     align-content: center;
-    padding: 85px 375px 80px;
+    padding: 73px 0 80px;
     box-sizing: border-box;
 }
 
@@ -1015,7 +1052,7 @@ section.carusel {
     font-weight: 600;
     font-style: normal;
     color: #555555;
-    margin: 0 0 30px 0;
+    margin: 0 0 17px 0;
 }
 
 .recent-posts-txt {
@@ -1067,12 +1104,12 @@ section.carusel {
 }
 
 .recent-posts-item-wrp {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .recent-posts-item-title {
     margin: 0;
-    padding: 30px 0 20px 30px;
+    padding: 20px 0 10px 30px;
     font-family: raleway;
     font-size: 20px;
     line-height: 1.2;
@@ -1084,7 +1121,7 @@ section.carusel {
 
 .recent-posts-item-txt {
     margin: 0;
-    padding: 0 0 30px 30px;
+    padding: 0 0 20px 30px;
     font-family: montserrat;
     font-size: 14px;
     line-height: 22px;
@@ -1116,7 +1153,7 @@ section.carusel {
 
 .read-more-pic {
     position: absolute;
-    margin-top: 4px;
+    margin-top: 5px;
     margin-left: 6px;
 }
 
@@ -1125,7 +1162,7 @@ section.carusel {
     flex-direction: column;
     position: absolute;
     margin-left: 20px;
-    margin-top: -370px;
+    margin-top: -367px;
 }
 
 .posts-date-day {
@@ -1159,7 +1196,7 @@ section.carusel {
 }
 
 .posts-change-pagination {
-    margin: 40px 5px 0 0;
+    margin: 35px 5px 0 0;
     fill: #d1d1d1;
 }
 
@@ -1169,13 +1206,20 @@ section.carusel {
 
 .partners {
     width: 100%;
-    height: 489px;
     background-image: url(../img/bg_footer_1.jpg);
-    padding: 130px 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 137px 0;
+    margin: 0 auto;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+}
+
+.partner-logo {
+    margin-right: 70px;
 }
 
 .partner-logo:hover {
@@ -1183,6 +1227,411 @@ section.carusel {
 }
 
 .partner-logo:active {
-   box-shadow: 5px 10px #888;
+    box-shadow: 5px 10px #888;
 }
 
+.about-wacom {
+    width: 100%;
+    min-height: 508px;
+    background-color: #191919;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.about-wacom-info {
+    width: 261px;
+}
+
+.about-wacom-txt {
+    margin: 20px 0;
+    font-family: montserrat;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    font-style: normal;
+    color: #555;
+}
+
+.about-wacom-rm {
+    margin: 0;
+    font-family: montserrat;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #d1d1d1;
+    text-decoration: none;
+}
+
+.about-wacom-rm:hover {
+    font-weight: 600;
+}
+
+.about-wacom-rm:active {
+    text-decoration: underline;
+}
+
+.about-wacom-posts {
+    max-width: 270px;
+    margin: 0 35px;
+}
+
+.about-wacom-posts-link {
+    text-decoration: none;
+}
+
+time {
+    font-family: montserrat;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 300;
+    font-style: normal;
+    color: #363636;
+}
+
+.about-wacom-posts-link-txt {
+    width: 100%;
+    margin: 0;
+    font-family: montserrat;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    font-style: normal;
+    color: #555;
+}
+
+.about-wacom-posts-link:last-child .about-wacom-posts-link-txt:after {
+    display: none;
+}
+
+.about-wacom-posts-link:hover time {
+    color: #fff;
+}
+
+.about-wacom-posts-link:hover .about-wacom-posts-link-txt {
+    color: #c7b299;
+}
+
+article > a.logo-link {
+    justify-content: flex-start;
+}
+
+.about-wacom-posts-link-txt:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #252525;
+    margin: 20px 0;
+}
+
+.about-wacom-title {
+    font-family: raleway;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+    margin: 20px 0 20px;
+}
+
+.about-wacom-twitter {
+    max-width: 270px;
+    margin: 0 30px 0 0;
+}
+
+
+.about-wacom-twitter-link {
+    text-decoration: none;
+}
+
+.about-wacom-twitter-link:hover .about-wacom-twitter-link-txt {
+    color: #c7b299;
+}
+
+.about-wacom-twitter-link-txt {
+    margin: 0;
+    font-family: montserrat;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    font-style: normal;
+    color: #555;
+}
+
+.dif-color {
+    color: #00bff3;
+}
+
+.about-wacom-twitter-link-time {
+    display: block;
+    margin: 5px 0 0;
+    font-family: montserrat;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 300;
+    font-style: normal;
+    color: #363636;
+}
+
+.about-wacom-twitter-link-time:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #252525;
+    margin: 15px 0 20px;
+}
+
+.about-wacom-twitter-link:last-child .about-wacom-twitter-link-time:after {
+    display: none;
+}
+
+.bitly {
+    color: #959595;
+}
+
+.about-wacom-widget {
+    max-width: 270px;
+    margin: 0;
+}
+
+.about-wacom-widget-pic {
+    margin: 0 3px 3px 0;
+}
+
+.about-wacom-widget-link:hover {
+    opacity: .7;
+}
+
+.copyright {
+    width: 100%;
+    min-height: 111px;
+    background-color: #111111;
+    display: flex;
+    padding: 40px 0 55px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.copyright-txt {
+    margin: 0 14px 0 0;
+    font-family: montserrat;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 300;
+    font-style: normal;
+    color: #555;
+}
+
+.copyright-dif-wacom {
+    color: #959595;
+}
+
+.copyright-link {
+    text-decoration: none;
+    margin: 0 14px;
+    font-family: montserrat;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 300;
+    font-style: normal;
+    color: #555;
+}
+
+.copyright-link:hover {
+    color: #c7b299;
+}
+
+.copyright-link:active {
+    text-decoration: underline;
+}
+
+.copyright-link:after {
+    content: "|";
+    display: block;
+    color: #252525;
+    position: absolute;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+.copyright-dif-color {
+    color: #959595;
+}
+
+.copyright-support-wrp {
+    display: flex;
+    justify-content: space-around;
+}
+
+.copyright-link:nth-child(2):after {
+    content: "";
+}
+
+@media (max-width: 567px) {
+    .body {
+        width: 100%;
+        margin: 0;
+    }
+
+    .page-header {
+        width: 100%;
+        margin: 0;
+        max-height: 220px;
+        background-size: 100%;
+        background-color: transparent;
+        min-height: 0;
+    }
+
+    .logo-link {
+        width: 80%;
+        justify-content: flex-start;
+    }
+
+    .page-header-top {
+        padding: 10px 0 10px 40px;
+    }
+
+    .page-navigation {
+        margin: 0;
+        position: relative;
+    }
+
+    label {
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+
+    label,
+    #page-navigation-list {
+        display: block;
+        width: 80px;
+        height: 80px;
+        background-image: url(../img/open-menu.png);
+        background-repeat: no-repeat;
+        background-size: 50%;
+    }
+
+    .page-navigation-list {
+        visibility: hidden;
+        margin: 0 auto;
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .page-navigation-list li {
+        height: 20px;
+        width: 70px;
+        text-align: center;
+        background-color: #111;
+        margin-top: 2px;
+    }
+
+    .page-basket {
+        display: none;
+    }
+
+    .page-search-btn {
+        display: none;
+    }
+
+    section.carusel {
+        display: none;
+    }
+
+    .carusel-pagination {
+        display: none;
+    }
+
+    .page-content-features {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .page-content-realization {
+        display: none;
+    }
+
+    .page-aside {
+        display: none;
+    }
+
+    .page-content-projects {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .page-content-projects-list {
+        display: none;
+    }
+
+    .video {
+        display: none;
+    }
+
+    .mobile {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .mobile-image {
+        display: none;
+    }
+
+    .mobile-devices-title {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .statistic {
+        display: none;
+    }
+
+    .recent-posts {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .recent-posts-txt {
+        padding: 0;
+    }
+
+    .posts-change-pagination {
+        display: none;
+    }
+
+    .partners {
+        padding: 20px 0;
+    }
+
+    .partner-logo {
+        flex-wrap: wrap;
+        margin: 20px 20px 0 0;
+    }
+
+    .about-wacom {
+        display: none;
+    }
+
+    .copyright {
+        flex-wrap: wrap;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .copyright-link-support {
+        margin-right: 30px;
+    }
+
+
+}
