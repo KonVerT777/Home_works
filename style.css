@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    font-family: "Arial";
+    width: 1280px;
+}
+
+.page-header {
+    width: 100%;
+    background-color: #445162;
+    padding: 50px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.page-header:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.page-header-wrp {
+    width: 500px;
+    float: left;
+}
+
+.page-header-title {
+    display: block;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
+
+.page-header-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 40px;
+
+}
+
+.page-header-list-item {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 400;
+    position: relative;
+}
+
+.page-header-list-item:before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 19px;
+    position: absolute;
+    background-image: url(img/icon_check.png);
+    background-size: cover;
+    margin-left: -35px;
+    margin-top: 6px;
+}
+
+.page-header-pic {
+    display: block;
+    float: right;
+    background-color: #fff;
+    width: 469px;
+    min-height: 214px;
+}
+
+.product-description,
+.product-dignity,
+.screenshots {
+    padding: 50px;
+}
+
+.product-description:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.product-description-wrp {
+    width: 649px;
+    float: left;
+}
+
+.product-description-title,
+.product-dignity-title,
+.screenshots-title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #445161;
+    margin: 0 0 30px 0;
+}
+
+.product-description-text-1 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333333;
+    margin: 0 0 20px 0;
+    text-align: justify;
+}
+
+.product-description-text-2 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333333;
+    margin: 0;
+    text-align: justify;
+}
+
+.product-description-pic {
+    display: block;
+    float: right;
+    background-color: #445162;
+}
+
+.product-dignity {
+    background-color: #f5f5f5;
+}
+
+.product-dignity:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.product-dignity-title,
+.screenshots-title {
+    text-align: center;
+}
+
+.product-dignity-pluses-1,
+.product-dignity-pluses-2 {
+    width: 580px;
+}
+
+.product-dignity-pluses-1 {
+    float: left;
+}
+
+.product-dignity-pluses-2 {
+    float: right;
+}
+
+.product-dignity-pluses-list {
+    list-style: none;
+    margin: 0;
+}
+
+.product-dignity-pluses-list-item {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333333;
+    position: relative;
+    margin-left: 5px;
+    text-align: justify;
+}
+
+.product-dignity-pluses-list-item-center {
+    margin: 36px 0 36px 5px;
+}
+
+.product-dignity-pluses-list-item:before {
+    content: '+';
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    background-color: #333;
+    color: white;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 34px;
+    text-align: center;
+    /*background-image: url(img/icon_plus.png);*/
+    margin-top: 6px;
+    margin-left: -41px;
+}
+
+
+.screenshots-wrp-1 {
+    width: 580px;
+    float: left;
+    margin-top: 0;
+}
+
+.screenshots-wrp-2 {
+    width: 580px;
+    float: right;
+}
+
+.screenshots-1-pic,
+.screenshots-2-pic,
+.screenshots-3-pic,
+.screenshots-4-pic {
+    display: block;
+    float: left;
+    background-color: #445161;
+    margin-right: 15px;
+}
+
+figure {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-right: 0;
+}
+
+.screenshots-1-title,
+.screenshots-2-title,
+.screenshots-3-title,
+.screenshots-4-title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #445161;
+}
+
+.screenshots-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333;
+    text-align: justify;
+    margin-top: 0px;
+}
+
+.screenshots:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
