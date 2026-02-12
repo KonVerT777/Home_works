@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     font-family: "Arial";
     width: 1280px;
 }
@@ -52,7 +52,7 @@ body {
     width: 25px;
     height: 19px;
     position: absolute;
-    background-image: url(img/icon_check.png);
+    background-image: url(../img/icon_check.png);
     background-size: cover;
     margin-left: -35px;
     margin-top: 6px;
@@ -134,22 +134,18 @@ body {
     text-align: center;
 }
 
-.product-dignity-pluses-1,
-.product-dignity-pluses-2 {
-    width: 580px;
-}
-
-.product-dignity-pluses-1 {
-    float: left;
-}
-
-.product-dignity-pluses-2 {
-    float: right;
-}
-
 .product-dignity-pluses-list {
     list-style: none;
     margin: 0;
+    width: 530px;
+}
+
+.product-dignity-pluses-list-1 {
+    float: left;
+}
+
+.product-dignity-pluses-list-2 {
+    float: right;
 }
 
 .product-dignity-pluses-list-item {
@@ -160,10 +156,15 @@ body {
     position: relative;
     margin-left: 5px;
     text-align: justify;
+    margin: 0 0 20px 0;
+}
+
+.product-dignity-pluses-list-item:last-child {
+    margin: 0;
 }
 
 .product-dignity-pluses-list-item-center {
-    margin: 36px 0 36px 5px;
+    /*margin: 36px 0 36px 5px;*/
 }
 
 .product-dignity-pluses-list-item:before {
@@ -178,7 +179,6 @@ body {
     font-weight: 200;
     line-height: 34px;
     text-align: center;
-    /*background-image: url(img/icon_plus.png);*/
     margin-top: 6px;
     margin-left: -41px;
 }
@@ -212,6 +212,10 @@ figure {
     margin-right: 0;
 }
 
+.screenshots figure:last-child {
+    margin: 0;
+}
+
 .screenshots-1-title,
 .screenshots-2-title,
 .screenshots-3-title,
@@ -237,4 +241,159 @@ figure {
     display: block;
     width: 100%;
     clear: both;
+}
+
+.reviews {
+    padding: 50px;
+    padding-bottom: 30px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reviews-title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #445161;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.reviews-item {
+    width: 48%;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviews-item-avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #445161;
+    margin-right: 30px;
+}
+
+.reviews-item-text {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: #333333;
+    width: 80%;
+    margin: 0;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ebebeb;
+    position: relative;
+}
+
+.reviews-item-text:before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -35px;
+    border: 10px solid transparent;
+    border-right: 10px solid #ebebeb;
+}
+
+.reviews-item-text-author {
+    font-style: normal;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #989898;
+    margin: 5px 0 0 0;
+}
+
+.prices {
+    padding: 50px 145px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.prices-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #445161;
+}
+
+.price-item {
+    width: 300px;
+    min-height: 300px;
+    background-color: #445162;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.price-item-title {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #fff;
+    margin: 15px 0;
+}
+
+span.price-item-cost {
+    height: 71px;
+    border: 2px solid #445162;
+    font-size: 40px;
+    line-height: 75px;
+    font-weight: 400;
+    color: #445162;
+    background-color: #fff;
+    display: block;
+}
+
+ol.prise-item-list {
+    margin: 15px 0 0 0;
+}
+
+li {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    padding: 0;
+}
+
+li:last-child {
+    margin-bottom: 15px;
+}
+
+input.button {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    padding: 20px;
+    background-color: #fff;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #445161;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+input.button:hover {
+    background-color: darkgrey;
+}
+
+input.button:active {
+    color: red;
 }
